@@ -14,5 +14,5 @@ jobs:
   triggerActions: #Nombre del job
     runs-on: ubuntu-latest #Maquina en la que correrá
     steps: #Lista de steps del job hola-mundo
-      - name: Hola mundo #Segundo step de nombre Hola mundo
-        run: echo ¡Hola Mundo desde ${{ steps.ip.outputs.ipv4 }}! #bash
+      - name: Trigger de detección PR #Segundo step de nombre Hola mundo
+        run: echo ¡Trigger ON! #bash
