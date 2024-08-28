@@ -16,3 +16,5 @@ jobs:
     steps: #Lista de steps del job hola-mundo
       - name: Trigger de detección PR #Segundo step de nombre Hola mundo
         run: echo ¡Trigger ON! #bash
+      - name: Hola mundo #Segundo step de nombre Hola mundo
+        run: echo ¡Hola Mundo desde ${{ steps.ip.outputs.ipv4 }}! #bash
