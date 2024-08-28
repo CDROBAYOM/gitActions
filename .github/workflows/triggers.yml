@@ -21,7 +21,7 @@ on:
         - Activo
         - Inactivo
   schedule:
-    - cron:  '02 8 * * *'
+    - cron:  '5 * * * *'
 
 jobs:
   triggerActions: #Nombre del job
