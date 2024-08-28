@@ -10,11 +10,22 @@ on:
   pull_request:
     branches: [ "main" ]
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+  workflow_dispatch:
+    inputs:
+      alertas:
+        description: 'Punto de control'
+        default: Activo
+        required: true
+        type: choice
+        options:
+        - Activo
+        - Inactivo
+  schedule:
+    - cron:  '02 8 * * *'
+
 jobs:
   triggerActions: #Nombre del job
     runs-on: ubuntu-latest #Maquina en la que correrá
     steps: #Lista de steps del job hola-mundo
       - name: Trigger de detección PR #Segundo step de nombre Hola mundo
         run: echo ¡Trigger ON! #bash
-      - name: Hola mundo #Segundo step de nombre Hola mundo
-        run: echo ¡Hola Mundo desde ${{ steps.ip.outputs.ipv4 }}! #bash
